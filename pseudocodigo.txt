@@ -1,0 +1,19 @@
+Algoritmo SeleccionAscendente(Arreglo)
+    N = longitud(Arreglo)
+    
+    Desde i = 0 hasta N - 2 hacer
+        min_idx = i
+        
+        Desde j = i + 1 hasta N - 1 hacer
+            Si Arreglo[j] < Arreglo[min_idx] entonces
+                min_idx = j
+            Fin Si
+        Fin Para
+        
+        Si min_idx != i entonces
+            temporal = Arreglo[i]
+            Arreglo[i] = Arreglo[min_idx]
+            Arreglo[min_idx] = temporal
+        Fin Si
+    Fin Para
+Fin Algoritmo
